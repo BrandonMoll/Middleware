@@ -9,9 +9,10 @@ const customMW = require('./customMiddleware')
 const supplierRouter = require('./routers/supplier_router')
 const itemRouter = require('./routers/item_router')
 
-const server = express();
+process.env
 
-const PORT = 4000;
+const server = express();
+const PORT = process.env.PORT || 4000;
 
 server.use(express.json());
 server.use(helmet());
