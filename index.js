@@ -22,7 +22,9 @@ server.use('/api/suppliers', supplierRouter)
 server.use('/api/items', itemRouter)
 
 // 2 resources: suppliers, items
-
+server.get('/', (req, res) => {
+    res.send('we are live')
+})
 
 
 server.listen(PORT, () => {
